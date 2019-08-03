@@ -1,0 +1,56 @@
+.Lobby {
+    display: block;
+}
+
+
+.Lobby .player {
+    display: block;
+    padding: 5px 0 5px 25px;
+    background-color: #F5F5F5;
+    color: #555;
+    font-size: 20px;
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-shadow: 1px 0px 1px #e0e0e0;
+    transition: all 0.2s;
+    height: 38px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Lobby .player .player-name {
+    display: block;
+    position: absolute;
+}
+
+.Lobby .player.active {
+    color: #FFF;
+}
+
+.Lobby .room-code {
+    font-weight: bold;
+    color: #ec6e54;
+}
+
+.Lobby .player:before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #3697bf;
+    transition: all 0.2s;
+}
+
+.Lobby .player.active:before {
+    width: 100%;
+}
+
+.Lobby .player-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
