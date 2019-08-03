@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 
-import Entrance from './components/Entrance.js';
+import LobbyLobby from './components/LobbyLobby.js';
 import Lobby from './components/Lobby.js';
 
 import { roomSubscriber } from './api';
@@ -21,17 +21,19 @@ class App extends Component {
 
   render() {
     return (
-        <div className="App">
-          {
-            (Object.keys(this.state.room).length === 0) && (
-                <Entrance/>
-            )
-          }
-          {
-            (this.state.room.stage === 'lobby') && (
-                <Lobby room={this.state.room} />
-            )
-          }
+        <div className="gradient">
+          <div className="App">
+            {
+              (Object.keys(this.state.room).length === 0) && (
+                  <LobbyLobby/>
+              )
+            }
+            {
+              (this.state.room.stage === 'lobby') && (
+                  <Lobby room={this.state.room} />
+              )
+            }
+          </div>
         </div>
     );
   }

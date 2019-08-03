@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { createRoom, joinRoom } from '../api';
 
-class Entrance extends Component {
+class LobbyLobby extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -33,18 +33,25 @@ class Entrance extends Component {
 
     render() {
         return (
-            <div className="Entrance">
-                <input type="text" placeholder="Enter Your Name" value={this.state.playerName} onChange={this.handlePlayerNameChange} spellCheck={false} />
-                {this.state.playerName && (<button onClick={this.handleCreateRoom}>Create Room</button>)}
-                {this.state.playerName && (
-                    <div>
-                        <input type="text" placeholder="Room Code" value={this.state.roomCode} onChange={this.handleRoomCodeChange} spellCheck={false} />
-                        {this.state.roomCode && (<button onClick={this.handleJoinRoom}>Join Room</button>)}
+            <div className="LobbyLobby">
+                <div className="logo">
+                    { /* Nothing f'real. */ }
+                </div>
+                <div className="inputs">
+                    <div className="row join">
+                        <input type="text" placeholder="Room Name" value={this.state.roomCode} onChange={this.handleRoomCodeChange} spellCheck={false} />
+                        <button onClick={this.handleJoinRoom}>Join</button>
                     </div>
-                )}
+                    <div className="row or">
+                        <span>or</span>
+                    </div>
+                    <div className="row create">
+                        <button onClick={this.handleCreateRoom}>Create Room</button>
+                    </div>
+                </div>
             </div>
         );
     }
 }
 
-export default Entrance;
+export default LobbyLobby;

@@ -2,7 +2,7 @@ let Sentencer = require('sentencer');
 
 module.exports = {
     genRoomId : ()  => {
-        return Sentencer.make("{{adjective}}{{noun}}").toUpperCase();
+        return Sentencer.make("{{adjective}} COCK").toUpperCase();
     },
     addPlayer : (room, player) => {
         if (room && player) {
