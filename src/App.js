@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 
 import Entrance from './components/Entrance.js';
 import Lobby from './components/Lobby.js';

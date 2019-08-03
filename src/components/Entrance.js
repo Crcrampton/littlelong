@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { createRoom, joinRoom } from '../api';
 
-import './Entrance.css';
-
 class Entrance extends Component {
     constructor(props) {
         super(props);

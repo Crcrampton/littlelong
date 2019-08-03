@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 import Header from './Header';
 
-import './Lobby.css';
-
 class Lobby extends Component {
     render() {
         return (
