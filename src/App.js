@@ -16,6 +16,7 @@ class App extends Component {
     roomSubscriber((data, socketId) => {
       data.room.thisPlayer = socketId;
       this.setState({ room : data.room })
+      console.log(data.room);
     });
   }
 
@@ -29,7 +30,7 @@ class App extends Component {
               )
             }
             {
-              (this.state.room.stage === 'lobby') && (
+              (Object.keys(this.state.room).length > 0) && (
                   <Lobby room={this.state.room} />
               )
             }

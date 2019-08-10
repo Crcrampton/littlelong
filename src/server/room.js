@@ -24,12 +24,10 @@ module.exports = {
             return room;
         }
     },
-    createPlayer : (socket, name, isLeader, color) => {
+    createPlayer : (socket) => {
         return {
             id : socket.id,
-            name : name,
-            isLeader : isLeader,
-            color: color
+            stage: "teamSelect",
         }
     }
 };
