@@ -5,10 +5,10 @@ var socket;
 // Heroku Check?
 
 // Uncomment this for deploys.
-// socket = io();
+socket = io();
 
 // Uncomment this for local dev.
-socket = io("http://localhost:3001");
+// socket = io("http://localhost:3001");
 
 function createRoom(playerName) {
     socket.emit('createRoom', playerName);

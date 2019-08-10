@@ -8,10 +8,10 @@ var PORT;
 // Heroku Check?
 
 // Uncomment this for deploys.
-// PORT = process.env.PORT || 3000;
+PORT = process.env.PORT || 3000;
 
 // Uncomment this for local dev.
-PORT = 3001;
+// PORT = 3001;
 
 const server = express()
     .use(express.static(path.join(__dirname, '../../build')))
