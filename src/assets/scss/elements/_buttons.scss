@@ -20,6 +20,11 @@ button {
     border-color: $green;
   }
 
+  &.disabled {
+    color: #CCC;
+    border-color: #CCC;
+  }
+
   &.big {
     padding: 40px;
     font-size: 50px;
